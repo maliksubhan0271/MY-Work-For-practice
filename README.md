@@ -19,13 +19,13 @@ About Programs:
 
 
    How to run Programs?
-For C Programs:
+1. For C Programs:
    if you want run C language program: simply you compile the program form this commad  "gcc filename.c -o filename"
    and later run the ".exe" file.    Note:For this process you have a complier "GCC".
-For C++ Programs:
+2. For C++ Programs:
    if you want run C++ program: simply you compile the program form this commad  "g++ file.cpp -o output"
    and later run the ".exe" file.
-For HTML/CSS:
+3. For HTML/CSS:
         Html files can't compile. HTML file open directly in browser. So for this process you Write a commend in your git Bash "start filename.html" .
 
                                                             Thank you For visiting.....
