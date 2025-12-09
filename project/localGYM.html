@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malik GYM</title>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            background: url(images/abs-1850926_1280.jpg);
+            background-size: 150%;;
+            font-family: "Rubik Dirt", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            background-repeat: no-repeat;
+            color: white;
+        }
+        .left{
+            /* border: 2px solid white; */
+            display: inline-block;
+            margin: 9px 9px;
+            text-align: center;
+            font-size: 18px;
+        }
+         .left img{
+            width: 87px;
+          
+            }
+            .left div{
+                /* display: inline-block; */
+                
+            }
+            .mid{
+                display: block;
+                width: 48%;
+                margin: -105px auto;
+                font-size: 18px;
+               
+                /* border: 2px solid green; */
+                
+            }
+            .right input{
+                /* border: 2px solid rgb(241, 14, 14); */
+                margin: 5px;
+                padding: 4px;
+                display: inline-block;
+                position: absolute ;
+                right: 7px;
+                top: 23px;
+                font-size: medium;
+                font-family: "Rubik Dirt", system-ui;
+                 font-weight: 400;
+                 font-style: normal;
+                 border: black;
+                 border-radius: 10px;
+
+            }
+            .navbar li{
+                display: inline-block;
+                margin: 0px 7px;
+                font-size: 18px;
+                 
+            }
+            .navbar li a{
+                text-decoration: none;
+               color:white;
+               padding: 0px 8px;
+              
+            }
+             .navbar li a:hover, .navbar li a:active{
+                color: gray;
+                text-decoration: underline;
+            }
+            .right button{
+                display: flex;
+                background-color: #000000;
+                color: white;
+                padding: 2px 10px;
+                font-size: 15px;
+                /* border: #ededf6; */
+               
+            }
+            .containar{
+                border: 3px solid white;
+                border-radius: 20px;
+                position: absolute;
+                top: 218px;
+                left: 100px;
+                display: block;
+                width: 535px;
+                height: 300px;
+            }
+            .form input{
+                display: block;
+                width: 270px;
+                padding: 3px;
+                margin: 5px auto;
+                text-align: center;
+                font-size: 18px;
+                border: #000000;
+                border-radius: 13px;
+                font-family: "Rubik Dirt", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            }
+            .containar h1{
+                padding: 2px 108px;
+            }
+            .form button{
+                    display: block;
+                    width: 270px;
+                    margin: 5px auto;
+                background-color: #161616;
+                color:white;
+                padding: 3px;
+                font-size: 15px;
+                border-radius: 10px;
+                font-family: "Rubik Dirt", system-ui;
+                 font-weight: 400;
+                 font-style: normal;
+            }
+            .form button:hover{
+                 color: gray;
+                text-decoration: underline;
+            }
+             input:hover{
+                cursor: pointer;
+                color: gray;
+                text-decoration: underline;
+                background-color: rgb(163, 168, 172);
+            }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="left">
+            <!-- for logo -->
+            <img src="images/man-7328236_1280.webp" alt="">
+            <div>Malik GYM</div>
+        </div>
+         <div class="mid">
+            <!-- for mid boxes -->
+             <ul class="navbar">
+                <li><a href="#" a>Home</a></li>
+                <li><a href="#">About Us </a></li>
+                <li><a href="#">Ftiness Claculator</a></li>
+                <li><a href="#">Contact Us</a></li>
+             </ul>
+        </div>
+         <div class="right">
+            <!-- for rigth boxes -->
+            <input type="text" class="text" placeholder="search">
+        </div>
+    </header>
+    <div class="containar">
+        
+        <h1>Best Gym in Gujrat</h1>
+        <form action="" class="form">
+            <input type="text" placeholder="Enter Your Name">
+             <input type="Number" placeholder="Enter Your age">
+              <input type="text" placeholder="Enter your number ">
+              <input type="email" placeholder="Enter E-mail">
+            <input type="text" placeholder="Enter Gender">
+            <button class="bnt">Submit</button>
+         </form>
+    </div>
+</body>
+</html>
