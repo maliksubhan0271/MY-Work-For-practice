@@ -1,10 +1,11 @@
                                                     Welcome to My Repositiry
 Introduction:
-          My name is Subhan. I am student BSCS and my roll no: 25014119-132.Is reposrity ma ma na C/C++ or HTML OR CSS ky mini project bany hya apni pratric ky leya
+            My name is Subhan. I am student BSCS and my roll no: 25014119-132.Is reposrity ma ma na C/C++ or HTML OR CSS ky mini project bany hya apni pratric ky leya
 Is repostrity ma jo ma ny programs ky folder add kia ha vo ma na apni pratice ky leya bany hay or ab in ko github per upload kar deya ha ta ky dosry be in ko dakhy or jagha 
 mari galti ha mujy batya.. TA ky ma un ko improve kar.. I hope u must watch ma program.... 
 
 About Programs:
+no:      Folder name        About folder
 1.      Function in c++    is ma function waly programs hay..
 2.      Program C         is ma C language ky programs hay...
 3.      Programs C++        is ma C++ ky programs hay different tast perform hovy hay..
