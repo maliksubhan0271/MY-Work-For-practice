@@ -1,0 +1,3 @@
+cd "c:\from File\" ; if ($?) { g++ basic2.cpp -o basic2 } ; if ($?) { .\basic2 }
+
+

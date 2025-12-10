@@ -1,0 +1,4 @@
+productsId,productsname,productsprice,productsquantity
+11,lays,50,40
+22,juise,40,60
+33,bisket,40,50
