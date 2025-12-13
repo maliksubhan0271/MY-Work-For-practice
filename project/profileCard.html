@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
     <style>
+        
         body{
             /* width: 355px; */
             background-color: rgb(0, 0, 0);
             color: white;
-            display: flex;
+            /* display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: center; */
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            
+            
         }
         .card{
             border: 2px solid rgb(234, 230, 230);
             border-radius: 75px;
             background-color: rgb(11, 10, 10);
-            margin: 95px 0px;
+            margin:84px 416px; 
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -27,14 +33,16 @@
             width: 340px;
             box-shadow: 0px 0px 50px red,
                     0px 0px 85px blue ,
-                    0px 0px 150px white
+                    0px 0px 150px white;
+            
+            
         }
         .img{
             width: 170px;
             display: inline-block;
             position: absolute;
-            right: 455px;
-            top: 140px;
+            right: 475px;
+             top: 105px;
             border:2px solid rgb(212, 207, 207);
             border-radius: 40px;
             height: 180px;
@@ -83,10 +91,34 @@
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             cursor: pointer;
         }
+        .header{
+            /* border: 2px solid white; */
+            /* border-radius: 5px; */
+            /* box-shadow:
+                    0px 0px 23px red,
+                    0px 0px 23px blue ,
+                    0px 0px 17px white ; */
+             width: 260px;
+            position: absolute;
+             top: 0px;
+             left: 495px;
+              font-family: "Rubik Dirt", system-ui;
+            font-weight: 400;
+             font-style: normal;
+             font-size: 20px;
+            
+            
+        }
+        #container{
+                /* background-image: url(images/lee-jiyong-NX1Z62_2w04-unsplash.jpg); */
+
+        }
     </style>
 </head>
 <body>
-    <div class="card">
+    <div class="header"><h1>Profile Card</h1></div>
+    <div id="container" class="card">
+        
         <img class="img" src="images/lee-jiyong-NX1Z62_2w04-unsplash.jpg" alt="">
         <h3 class="name">Malik Subhan</h3>
         <p class="cost">Cost: KhoKhar</p>
