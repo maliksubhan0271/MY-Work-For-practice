@@ -11,23 +11,28 @@ int S_index[100];  // Search index
 int Pcount=0; // Counter for product
 int S_count=0;  //For Select Product
 int T_qty[100]; //For tempory Quantity
+
+            //varible declear
 string H_id, H_name,H_price,H_qty;  //for header line 
- int index=-1, Quantity, id, subTotal, price;
-    void loadProducts(){
-        ifstream file("miniShopManagment.txt");
+int index=-1, Quantity, id, subTotal, price;
+
+            //Function start
+    void loadProducts(){    //Funtion for load product from file...
+        ifstream file("miniShopManagment.txt");     //file open
         string line;
 
-        getline(file,line);
+        getline(file,line);     // First line read
             stringstream row1(line);
             getline(row1,H_id , ',');
             getline(row1, H_name, ',');
             getline(row1, H_price, ',');
             getline(row1, H_qty, ',');
 
-        while(getline(file,line)){
+        while(getline(file,line)){     // Loop for item
 
             stringstream row(line);
             string id,name,price,qty;
+
             getline(row,id, ',');
             Pid[Pcount] = stoi(id);
 
@@ -44,71 +49,86 @@ string H_id, H_name,H_price,H_qty;  //for header line
 
         }
         
-        file.close();
+        file.close();  // File close
     }
-        void displayProducts(){
+        void displayProducts(){     // Function for show display Product
+
             cout << "\t====== Avaialbe Products ======\n";
-            cout <<"\t"<<H_id<<"\t"<<H_name<<"\t"<<H_price<<"\t"<<H_qty<<endl;
-            for(int i=0; i<Pcount; i++){
+            cout <<"\t"<<H_id<<"\t"<<H_name<<"\t"<<H_price<<"\t"<<H_qty<<endl;   // For header
+
+            for(int i=0; i<Pcount; i++){    // Loop for show item
                 cout <<"\t"<<Pid[i]<<"\t"<<Pname[i]<<"\t"<<Pprice[i]<<"\t"<<Pqty[i]<<"\n";
             }
+
             cout << "\t==============\n";
         }
-      void slectProduct(){
-                displayProducts();
+
+      void slectProduct(){      // Function for Select product
+
+                displayProducts();    // for show product
                 cout<< "====== Select Products ======"<<endl;
                 bool Choice;
                  S_count=0;
                 
-            do{
+            do{     // loop ask from user that anything else
                 cout << "Enter a ID: ";
                 cin >>id;
 
-            for(int i=0; i<=Pcount; i++ ){
+            for(int i=0; i<=Pcount; i++ ){     // loop for searching item
                 if(Pid[i] == id){
                  index =i;
                 }
             }  
+
             if(index == -1){
                 cout << "Product is not Found!"<<endl;
             }
 
             cout << "Enter a quantity: ";
             cin >>Quantity;
-            if(Quantity>Pqty[index]){
+
+            if(Quantity>Pqty[index]){       // For check quantity
                 cout << "Quantity not enough!"<<endl;
             }  
             
-            S_index[S_count] = index;
-             T_qty[S_count] = Quantity;
+            S_index[S_count] = index;   // Store index value per item...
+             T_qty[S_count] = Quantity; // Store quantity per item...
             S_count++;
-            cout << "IF you want More Product Press 1 ohter wise 0: ";
+
+            cout << "IF you want More Product Press 1 ohter wise 0: ";  //Ask from user...
             cin >> Choice;
-        }while(Choice == true);
+
+        }while(Choice == true);    // loop repeat when user tell yes...
+
         cout << "Now Pree 3 and Genrate the bill!"<<endl;
             cout << "============="<<endl;
       }
 
-        void genrateBill(){
+        void genrateBill(){  // Function for bill
         cout << "====== Genrated Bail ======"<<endl;
-            for (int i=0; i<S_count; i++){
+
+            for (int i=0; i<S_count; i++){  // loop Total bill per item..
                 index = S_index[i];
                 Quantity = T_qty[i];
+
                 int total = Quantity * Pprice[index];
                 Pqty[index] -= Quantity;
 
                 cout << "Product Name: "<<Pname[index]<<endl;
                 cout << "Product Quantity: "<<Quantity<<endl;
                 cout << "Total Bill per item: "<<total<<endl;
+
                  subTotal += total;
             }
-            cout << "Total Bill of all Product: "<<subTotal<<endl;
+
+            cout << "Total Bill of all Product: "<<subTotal<<endl;  // For TOtal all product...
                 cout << "==========="<<endl;
         }
     
-        void addAndsaveProduct(){
-             displayProducts();
-            ofstream file("miniShopManagment.txt");
+        void addAndsaveProduct(){   //Function for add and save product
+             displayProducts();     //For Show already aviable item
+
+            ofstream file("miniShopManagment.txt");  //file open..
 
             cout<< "Enter a Product id: ";
             cin >> Pid[Pcount];
@@ -119,18 +139,23 @@ string H_id, H_name,H_price,H_qty;  //for header line
             cout << "Enter a product Quantity: ";
             cin >> Pqty[Pcount];
             Pcount++;
-          file<<H_id<<","<<H_name<<","<<H_price<<","<<H_qty<<endl;
-            for(int i=0; i<Pcount; i++){
+
+          file<<H_id<<","<<H_name<<","<<H_price<<","<<H_qty<<endl;  // For header Line
+
+            for(int i=0; i<Pcount; i++){        // For item save in file
                 file<<Pid[i]<<","<<Pname[i]<<","<<Pprice[i]<<","<<Pqty[i]<<endl;
             }
+
               cout << "Product save sucessfully:";
-            file.close();
+            file.close();       //File close...
         }
     
- int main() {
+ int main() {       //Main function start
+
     int Choice;
     loadProducts();
-    do{
+
+    do{     //Loop for Show MENU..
 
         cout << "\n====== MENU ======\n";
         cout << "1. Display product\n";
@@ -141,7 +166,7 @@ string H_id, H_name,H_price,H_qty;  //for header line
         cout << "Enter Choice: ";
         cin >> Choice;
 
-        switch(Choice){
+        switch(Choice){     //For Call Function
             case 1:
             displayProducts();
             break;
@@ -162,7 +187,7 @@ string H_id, H_name,H_price,H_qty;  //for header line
     }
 
 }
- while(Choice!=5);
+ while(Choice!=5);  //Loop end when user want exist...
 
     return 0;
  }
