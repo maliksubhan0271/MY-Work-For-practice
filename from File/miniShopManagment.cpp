@@ -18,7 +18,7 @@ int index=-1, Quantity, id, subTotal, price;
 
             //Function start
     void loadProducts(){    //Funtion for load product from file...
-        ifstream file("miniShopManagment.txt");     //file open
+        ifstream file("C:/miniShopManagment/Book.csv");     //file open
         string line;
 
         getline(file,line);     // First line read
@@ -128,7 +128,7 @@ int index=-1, Quantity, id, subTotal, price;
         void addAndsaveProduct(){   //Function for add and save product
              displayProducts();     //For Show already aviable item
 
-            ofstream file("miniShopManagment.txt");  //file open..
+            ofstream file("C:/miniShopManagment/Book.csv");  //file open..
 
             cout<< "Enter a Product id: ";
             cin >> Pid[Pcount];
